@@ -12,7 +12,9 @@ headers = {
 
 response = requests.get(url, headers=headers, params=querystring)
 
-string1=f'''The Doller (USD) currently trading at, {response.json()}, with Indian Rupee (INR)'''
-
-st.title("Exchange Analysis")
-st.subheader(string1)
+if st.button('Today Exchange'):
+    with st.spinner("Getting today's exchange"):
+         response = requests.get(url, headers=headers, params=querystring)  
+         string1=f'''The Doller (USD) currently trading at {response.json()} with Indian Rupee (INR)'''
+         st.text_area("Analysis", string1, height=500)
+         st.success('Done!')
