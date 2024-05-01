@@ -3,7 +3,7 @@ import streamlit as st
 
 url = "https://currency-exchange.p.rapidapi.com/exchange"
 
-querystring = {"from":"USD","to":"INR","q":"15.0"}
+querystring = {"from":"ZAR","to":"INR","q":"15.0"}
 
 headers = {
 	"X-RapidAPI-Key": "48f6df45cemshcdaa8c0d3584c98p108ba6jsn4f7d253e5b24",
