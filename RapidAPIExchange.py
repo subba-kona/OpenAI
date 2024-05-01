@@ -1,6 +1,7 @@
 import requests
+import streamlit as st
 
-url = "<replace with your openAI secret>"
+url = "https://currency-exchange.p.rapidapi.com/exchange"
 
 querystring = {"from":"USD","to":"INR","q":"15.0"}
 
@@ -11,4 +12,7 @@ headers = {
 
 response = requests.get(url, headers=headers, params=querystring)
 
-print("The Doller (USD) currently trading at", response.json(), "with Indian Rupee (INR)")
+string1=f'''The Doller (USD) currently trading at, {response.json()}, with Indian Rupee (INR)'''
+
+st.title("Exchange Analysis")
+st.subheader(string1)
