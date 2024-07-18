@@ -2,7 +2,7 @@ import openai
 import requests
 import json
 
-openai.api_key = "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"
+openai.api_key = "your api key"
 
 def basicgeneration(prompt) :
      completion = openai.ChatCompletion.create( model="gpt-3.5-turbo", messages= [ {"role": "user", "content": prompt }])

@@ -1,6 +1,6 @@
 import openai
 
-openai.api_key = "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"
+openai.api_key = "your key"
 
 def basicgeneration(prompt) :
      completion = openai.ChatCompletion.create( model="gpt-3.5-turbo", messages= [ {"role": "user", "content": prompt }])
